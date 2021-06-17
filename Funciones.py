@@ -4,6 +4,7 @@
 import matplotlib.pyplot as plt
 from matplotlib.backend_bases import MouseButton
 import numpy as np
+import math
 
 
 def saludo(nombre, apellido_paterno, apellido_materno):
@@ -34,6 +35,12 @@ def funcion_lineal(x):
 def funcion_cuadratica(x):
     return 2*(x**2) + 5*x - 2
 
+# Funcion seno
+
+
+def funcion_seno(x):
+    return math.sin(x)
+
 
 def main():
     # saludo("Aldo","Navarrete","Zamora")
@@ -61,8 +68,27 @@ def main():
     # plt.show()
 
     # Funcion cuadratica
-    x = range(-100, 100)
-    plt.plot(x, [funcion_cuadratica(i) for i in x])
+
+    # x = range(-100, 100)
+    # plt.plot(x, [funcion_cuadratica(i) for i in x])
+    # # poniendo el plano cartesiano
+    # ax = plt.gca()
+    # ax.spines["top"].set_color("none")
+    # ax.spines["bottom"].set_position("zero")
+    # ax.spines["left"].set_position("zero")
+    # ax.spines["right"].set_color("none")
+    # plt.xlim(-20, 20)
+    # plt.ylim(-15, 100)
+    # plt.title("Funcion Cuadratica", fontsize=20)
+    # plt.xlabel('x')
+    # plt.ylabel('f(x)')
+    # plt.grid()
+    # plt.show()
+
+    # Funcion seno
+
+    x = range(-10, 10, 0.01)
+    plt.plot(x, [funcion_seno(i) for i in x])
     # poniendo el plano cartesiano
     ax = plt.gca()
     ax.spines["top"].set_color("none")
@@ -70,8 +96,8 @@ def main():
     ax.spines["left"].set_position("zero")
     ax.spines["right"].set_color("none")
     plt.xlim(-20, 20)
-    plt.ylim(-15, 100)
-    plt.title("Funcion Cuadratica", fontsize=20)
+    plt.ylim(-1, 1)
+    plt.title("Funcion Seno", fontsize=20)
     plt.xlabel('x')
     plt.ylabel('f(x)')
     plt.grid()
