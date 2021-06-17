@@ -1,0 +1,23 @@
+[33mcommit 05ce59c489126c75521beefa75de7d7d4db516de[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Aldo Navarrete <aaldiitoo@gmail.com>
+Date:   Thu Jun 17 12:55:09 2021 -0500
+
+    quitando la carpeta de vscode
+
+[33mcommit 9b6f092390de71fc3e147f01acaa0d3aab3b1547[m
+Author: Aldo Navarrete <aaldiitoo@gmail.com>
+Date:   Thu Jun 17 12:54:17 2021 -0500
+
+    Pintar el eje de las x y el eje de las y con matplotlib
+
+[33mcommit 33928f158dc669d62b6227222ce02e2003cb1a59[m
+Author: Aldo Navarrete <aaldiitoo@gmail.com>
+Date:   Thu Jun 17 12:08:16 2021 -0500
+
+    Argumentos de la funcion
+
+[33mcommit a11a6b0e24f0bd4ba8754dba4d1275759d1ee6c4[m
+Author: Aldo Navarrete <aaldiitoo@gmail.com>
+Date:   Thu Jun 17 11:59:05 2021 -0500
+
+    Definicion de funcion

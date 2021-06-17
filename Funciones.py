@@ -30,18 +30,9 @@ def funcion_lineal(x):
     return 1 * x
 
 
-def on_move(event):
-    # get the x and y pixel coords
-    x, y = event.x, event.y
-    if event.inaxes:
-        ax = event.inaxes  # the axes instance
-        print("data coords %f %f" % (event.xdata, event.ydata))
-
-
-def on_click(event):
-    if event.button is MouseButton.LEFT:
-        print("disconnecting callback")
-        plt.disconnect(binding_id)
+# Funcion cuadratica
+def funcion_cuadratica(x):
+    return 2*(x**2) + 5*x - 2
 
 
 def main():
@@ -51,15 +42,38 @@ def main():
     # print(suma(9, 5))
     # print(funcion_lineal(-1))
 
+    # Funcion lineal
+
+    # x = range(-100, 100)
+    # plt.plot(x, [funcion_lineal(i) for i in x])
+    # # poniendo el plano cartesiano
+    # ax = plt.gca()
+    # ax.spines["top"].set_color("none")
+    # ax.spines["bottom"].set_position("zero")
+    # ax.spines["left"].set_position("zero")
+    # ax.spines["right"].set_color("none")
+    # plt.xlim(-100, 100)
+    # plt.ylim(-100, 100)
+    # plt.title("Funcion Lineal", fontsize=20)
+    # plt.xlabel('x')
+    # plt.ylabel('f(x)')
+    # plt.grid()
+    # plt.show()
+
+    # Funcion cuadratica
     x = range(-100, 100)
-    plt.plot(x, [funcion_lineal(i) for i in x])
+    plt.plot(x, [funcion_cuadratica(i) for i in x])
+    # poniendo el plano cartesiano
     ax = plt.gca()
     ax.spines["top"].set_color("none")
     ax.spines["bottom"].set_position("zero")
     ax.spines["left"].set_position("zero")
     ax.spines["right"].set_color("none")
-    plt.xlim(-100, 100)
-    plt.ylim(-100, 100)
+    plt.xlim(-20, 20)
+    plt.ylim(-15, 100)
+    plt.title("Funcion Cuadratica", fontsize=20)
+    plt.xlabel('x')
+    plt.ylabel('f(x)')
     plt.grid()
     plt.show()
 
