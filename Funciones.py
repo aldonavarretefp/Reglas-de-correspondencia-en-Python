@@ -28,7 +28,7 @@ def suma(a, b):
 
 # Funcion lineal
 def funcion_lineal(x):
-    return 1 * x
+    return 1 * x+1
 
 
 # Funcion cuadratica
@@ -40,6 +40,27 @@ def funcion_cuadratica(x):
 
 def funcion_seno(x):
     return math.sin(x)
+
+
+# Ejercicio
+
+def g(x):
+    if x is not None:
+        return x+1
+
+
+def f(x):
+    if x >= 0:
+        return math.sqrt(x)
+
+
+def fog(x):
+    return f(g(x))
+
+
+def gof(x):
+    if x is not None:
+        return g(f(x))
 
 
 def main():
@@ -87,8 +108,33 @@ def main():
 
     # Funcion seno
 
-    x = range(-10, 10, 0.01)
-    plt.plot(x, [funcion_seno(i) for i in x])
+    # x = range(-10, 10, 0.01)
+    # plt.plot(x, [funcion_seno(i) for i in x])
+    # # poniendo el plano cartesiano
+    # ax = plt.gca()
+    # ax.spines["top"].set_color("none")
+    # ax.spines["bottom"].set_position("zero")
+    # ax.spines["left"].set_position("zero")
+    # ax.spines["right"].set_color("none")
+    # plt.xlim(-20, 20)
+    # plt.ylim(-1, 1)
+    # plt.title("Funcion Seno", fontsize=20)
+    # plt.xlabel('x')
+    # plt.ylabel('f(x)')
+    # plt.grid()
+    # plt.show()
+
+    # Ejercicio
+    """"
+    Sea f(x) = sqrt(x)
+    y g(x) = x+1
+    Entonctrar ambas graficas 
+    Realizar f composicion g
+    Realizar g composicion f
+    """
+    # Funcion f
+    x = range(0, 50)
+    plt.plot(x, [f(i) for i in x])
     # poniendo el plano cartesiano
     ax = plt.gca()
     ax.spines["top"].set_color("none")
@@ -96,8 +142,58 @@ def main():
     ax.spines["left"].set_position("zero")
     ax.spines["right"].set_color("none")
     plt.xlim(-20, 20)
-    plt.ylim(-1, 1)
-    plt.title("Funcion Seno", fontsize=20)
+    plt.ylim(-20, 20)
+    plt.title("Funcion f", fontsize=20)
+    plt.xlabel('x')
+    plt.ylabel('f(x)')
+    plt.grid()
+    plt.show()
+    # Funcion g
+    x = range(-50, 50)
+    plt.plot(x, [g(i) for i in x])
+    # poniendo el plano cartesiano
+    ax = plt.gca()
+    ax.spines["top"].set_color("none")
+    ax.spines["bottom"].set_position("zero")
+    ax.spines["left"].set_position("zero")
+    ax.spines["right"].set_color("none")
+    plt.xlim(-20, 20)
+    plt.ylim(-20, 20)
+    plt.title("Funcion g", fontsize=20)
+    plt.xlabel('x')
+    plt.ylabel('f(x)')
+    plt.grid()
+    plt.show()
+
+    # fog
+    x = range(-50, 50)
+    plt.plot(x, [fog(i) for i in x])
+    # poniendo el plano cartesiano
+    ax = plt.gca()
+    ax.spines["top"].set_color("none")
+    ax.spines["bottom"].set_position("zero")
+    ax.spines["left"].set_position("zero")
+    ax.spines["right"].set_color("none")
+    plt.xlim(-20, 20)
+    plt.ylim(-20, 20)
+    plt.title("Funcion g", fontsize=20)
+    plt.xlabel('x')
+    plt.ylabel('f(x)')
+    plt.grid()
+    plt.show()
+
+    # gof
+    x = range(-50, 50)
+    plt.plot(x, [gof(i) for i in x])
+    # poniendo el plano cartesiano
+    ax = plt.gca()
+    ax.spines["top"].set_color("none")
+    ax.spines["bottom"].set_position("zero")
+    ax.spines["left"].set_position("zero")
+    ax.spines["right"].set_color("none")
+    plt.xlim(-20, 20)
+    plt.ylim(-20, 20)
+    plt.title("Funcion g o f (x)", fontsize=20)
     plt.xlabel('x')
     plt.ylabel('f(x)')
     plt.grid()
